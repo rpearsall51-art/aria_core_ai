@@ -905,6 +905,29 @@
             <li><span></span><div>1 follow-up automation (email or SMS) for new leads.</div></li>
             <li><span></span><div>10 AI-written social media posts to announce the new system.</div></li>
           </ul>
+
+        <section id="branding" style="padding: 60px 20px; background:#0c0c10; color:#fff;">
+  <h2 style="text-align:center; font-size:32px; margin-bottom:20px;">Branding Services</h2>
+
+  <div style="max-width:700px; margin:0 auto; background:#111117; padding:30px; border:1px solid #333; border-radius:10px;">
+    <h3 style="font-size:24px; margin-bottom:10px;">AriaCore Branding Kit – $249</h3>
+    <p style="line-height:1.6; margin-bottom:20px;">
+      A complete branding package designed for high-tech, AI-driven businesses.
+      Includes:<br><br>
+      • Custom logo (SVG + PNG + transparent)<br>
+      • Light + dark variants<br>
+      • Full banner set for social platforms<br>
+      • Website hero graphics<br>
+      • Favicon pack (ICO + PNG)<br>
+      • Commercial-use rights<br>
+      • Delivered in multiple resolutions<br>
+    </p>
+
+    <!-- PAYPAL BUTTON BRANDING KIT -->
+    <div><!-- Branding Kit PayPal Button --></div>
+  </div>
+</section>
+
           <!-- TODO: replace href with real payment or booking link -->
           <a href="#contact"><div class="pricing-cta">Launch <strong>Starter Build</strong> →</div></a>
         </div>
@@ -944,6 +967,49 @@
       </div>
     </section>
 
+    <section id="logo-maker" style="padding: 40px 20px; background:#0a0a0e; color:#fff;">
+  <div style="max-width:700px; margin:0 auto; background:#111117; padding:30px; border:1px solid #333; border-radius:10px;">
+    <h3 style="font-size:24px; margin-bottom:10px;">Logo Maker – $49</h3>
+    <p style="line-height:1.6; margin-bottom:20px;">
+      A custom AI-generated business logo in multiple styles and formats.
+      Delivered as:<br><br>
+      • PNG + transparent version<br>
+      • SVG vector version<br>
+      • Light + dark themes<br>
+      • Square + wide format<br>
+    </p>
+
+    <!-- PAYPAL BUTTON LOGO MAKER -->
+    <div><!-- Logo Maker PayPal Button --></div>
+  </div>
+</section>
+
+<section id="news" style="padding:60px 20px; background:#0b0b10; color:#fff;">
+  <h2 style="text-align:center; margin-bottom:30px;">Latest Robotics & AI News</h2>
+  <div id="news-feed" style="max-width:800px; margin:0 auto;"></div>
+</section>
+
+<script>
+async function loadRSS() {
+  const feedURL = "https://www.hackaday.com/blog/feed/";
+  const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedURL)}`;
+  const res = await fetch(apiURL);
+  const data = await res.json();
+  const feed = document.getElementById("news-feed");
+
+  data.items.slice(0, 5).forEach(item => {
+    feed.innerHTML += `
+      <div style="margin-bottom:20px; border-bottom:1px solid #333; padding-bottom:15px;">
+        <a href="${item.link}" target="_blank" style="color:#58a6ff; font-size:18px; text-decoration:none;">
+          ${item.title}
+        </a>
+      </div>
+    `;
+  });
+}
+loadRSS();
+</script>
+
     <!-- HARDWARE AFFILIATE GRID -->
     <section class="section" id="hardware">
       <div class="section-header">
@@ -958,47 +1024,38 @@
 
       <div class="affiliate-grid">
         <!-- TODO: Replace # with real affiliate URLs -->
-        <div class="affiliate-card">
-          <div class="affiliate-label">3D Printing</div>
-          <div class="affiliate-name">Core 3D Printer + Filament Stack</div>
-          <div>
-            Reliable FDM printer + PETG / TPU / CF filaments suitable for functional parts, mounts, and shells.
-          </div>
-          <div class="affiliate-meta">Best for: brackets, housings, prototypes.</div>
-          <div class="affiliate-link"><a href="#" target="_blank" rel="noopener">View Printer Picks →</a></div>
-        </div>
+  <section id="hardware" style="padding:60px 20px; background:#0a0a0c; color:#fff;">
+  <h2 style="text-align:center; margin-bottom:40px;">Recommended Hardware & Tools</h2>
 
-        <div class="affiliate-card">
-          <div class="affiliate-label">Compute</div>
-          <div class="affiliate-name">Ryzen Mini PC + Jetson / Pi</div>
-          <div>
-            The same style of mini-PC and controller boards used to run Aria’s brain, perception stack, and limb controllers.
-          </div>
-          <div class="affiliate-meta">Host your AI stack locally.</div>
-          <div class="affiliate-link"><a href="#" target="_blank" rel="noopener">View Compute Stack →</a></div>
-        </div>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
 
-        <div class="affiliate-card">
-          <div class="affiliate-label">Electronics</div>
-          <div class="affiliate-name">Controllers, Sensors & IO</div>
-          <div>
-            ESP32, microcontrollers, camera modules, and basic sensors suitable for early automation, monitoring, and robotics projects.
-          </div>
-          <div class="affiliate-meta">Great for tinkerers and devs.</div>
-          <div class="affiliate-link"><a href="#" target="_blank" rel="noopener">View Electronics →</a></div>
-        </div>
+    <div style="background:#111117; padding:20px; width:250px; border-radius:10px; border:1px solid #333;">
+      <h3 style="font-size:20px; margin-bottom:10px;">AI Workstations</h3>
+      <p style="font-size:14px; opacity:0.8;">High-performance rigs for AI, ML, and robotics development.</p>
+      <a href="#" target="_blank" style="color:#58a6ff;">View Hardware</a>
+    </div>
 
-        <div class="affiliate-card">
-          <div class="affiliate-label">Tools</div>
-          <div class="affiliate-name">Shop & Field Essentials</div>
-          <div>
-            Hand tools, crimping sets, soldering gear, and shop equipment that actually survive work on metal and plastic.
-          </div>
-          <div class="affiliate-meta">For people who actually build things.</div>
-          <div class="affiliate-link"><a href="#" target="_blank" rel="noopener">View Tool List →</a></div>
-        </div>
-      </div>
-    </section>
+    <div style="background:#111117; padding:20px; width:250px; border-radius:10px; border:1px solid #333;">
+      <h3 style="font-size:20px; margin-bottom:10px;">Raspberry Pi & Jetson</h3>
+      <p style="font-size:14px; opacity:0.8;">Embedded computing boards for robotics and automation.</p>
+      <a href="#" target="_blank" style="color:#58a6ff;">View Kits</a>
+    </div>
+
+    <div style="background:#111117; padding:20px; width:250px; border-radius:10px; border:1px solid #333;">
+      <h3 style="font-size:20px; margin-bottom:10px;">3D Printing</h3>
+      <p style="font-size:14px; opacity:0.8;">Printers, filaments, nozzles, and prototyping tools.</p>
+      <a href="#" target="_blank" style="color:#58a6ff;">View Gear</a>
+    </div>
+
+    <div style="background:#111117; padding:20px; width:250px; border-radius:10px; border:1px solid #333;">
+      <h3 style="font-size:20px; margin-bottom:10px;">Robotics Components</h3>
+      <p style="font-size:14px; opacity:0.8;">Motors, sensors, drivers, actuators, and hardware.</p>
+      <a href="#" target="_blank" style="color:#58a6ff;">View Parts</a>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- WHY ARIACORE -->
     <section class="section" id="about">
@@ -1050,7 +1107,7 @@
       </div>
       <div class="cta-wide-actions">
         <!-- TODO: replace mailto with your real address, or swap for a form / booking link -->
-        <a href="mailto:YOUR_EMAIL_HERE?subject=AriaCore Automation Build Request">
+       <a href="mailto:rpearsall@aria-core.tech?subject=AriaCore%20Service%20Inquiry">
           <button class="btn-primary">Email AriaCore Brief</button>
         </a>
         <a href="#automation">
