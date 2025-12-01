@@ -1,0 +1,31 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node / npm (in case you ever add tooling)
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts (if you add a build step later)
+dist/
+build/
+
+# Local environment config
+.env
+.env.*
+*.local
+
+# Optional assets (cache / large files)
+assets/tmp/
+assets/cache/
+
+# Mac/Linux permission artifacts
+._*
