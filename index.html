@@ -3,154 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AriaCore AI & Robotics – SeedSphere Reforestation Systems</title>
+<title>AriaCore AI & Robotics – Autonomous Reforestation Systems</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #0f0f0e;
-        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color: #e8e3d3;
-        line-height: 1.6;
-    }
+/* ======= GLOBAL STYLES ======= */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0d0a;
+    color: #e0e5d8;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    /* EARTHY + HIGH-TECH THEME */
-    :root {
-        --accent: #7ac27a;    /* Forest green highlight */
-        --earth: #3e3a33;     /* Soil tone */
-        --hover: #95f3a3;     /* Neon green for high-tech touch */
-        --panel: #1a1a18;     /* Deep matte background */
-    }
+/* COLORS */
+:root {
+    --accent: #7df27d;        /* neon green */
+    --accent-soft: #2c582c;   /* forest green */
+    --panel: #111511;         /* deep earth */
+    --border: #2f3a2e;        /* subtle borders */
+}
 
-    header {
-        background: linear-gradient(to bottom right, #1a1f1a, #0d0f0d);
-        padding: 40px 20px;
-        text-align: center;
-        border-bottom: 2px solid var(--accent);
-    }
+/* ==== ANIMATIONS ==== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    header h1 {
-        font-size: 2.8rem;
-        letter-spacing: 2px;
-        margin: 0;
-        color: var(--accent);
-        text-shadow: 0 0 5px #2b6b2b;
-    }
+/* ==== HEADER / HERO ==== */
+header {
+    background: linear-gradient(135deg, #060806, #0b130b);
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 2px solid var(--accent-soft);
+    box-shadow: 0 0 40px rgba(0,255,100,0.12);
+}
 
-    header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        margin-top: 12px;
-    }
+header h1 {
+    font-size: 3.5rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(125,242,125,0.5);
+    margin: 0;
+}
 
-    .section {
-        padding: 50px 20px;
-        max-width: 960px;
-        margin: auto;
-        background: var(--panel);
-        margin-top: 30px;
-        border-radius: 12px;
-        border: 1px solid var(--earth);
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-    }
+header p {
+    font-size: 1.3rem;
+    color: #cbd4c1;
+    margin-top: 10px;
+}
 
-    .section h2 {
-        color: var(--hover);
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-shadow: 0 0 6px rgba(140, 255, 140, 0.4);
-    }
+/* ==== SECTIONS ==== */
+.section {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
+}
 
-    .section p, .section li {
-        font-size: 1.1rem;
-        opacity: 0.95;
-    }
+.section h2 {
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(90,255,90,0.3);
+}
 
-    ul {
-        margin-left: 20px;
-    }
+.section p, .section li {
+    font-size: 1.1rem;
+    color: #dde3d4;
+}
 
-    .contact-box {
-        background: #111;
-        border-left: 4px solid var(--accent);
-        padding: 20px;
-        margin-top: 25px;
-        border-radius: 6px;
-    }
+ul {
+    padding-left: 20px;
+}
 
-    .contact-box a {
-        color: var(--hover);
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* CONTACT BOX */
+.contact-box {
+    background: #0d120d;
+    border-left: 5px solid var(--accent);
+    padding: 20px;
+    border-radius: 8px;
+}
 
-    .contact-box a:hover {
-        color: var(--accent);
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        font-size: 0.9rem;
-        opacity: 0.7;
-    }
-
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #888;
+}
 </style>
+
 </head>
 <body>
 
-<header>
+<header class="fade-in">
     <h1>AriaCore AI & Robotics</h1>
-    <p>Autonomous Systems for Reforestation, Climate Recovery, and Post-Wildfire Restoration</p>
+    <p>Autonomous Systems for Climate Recovery & Post-Wildfire Reforestation</p>
 </header>
 
-<div class="section">
+<div class="section fade-in">
     <h2>SeedSphere Autonomous Reforestation System</h2>
     <p>
-        The <strong>SeedSphere</strong> is a reusable, drone-deployable ground unit engineered for planting 
-        native California species across wildfire burn scars and degraded terrain. Each sphere aerates soil, 
-        distributes native seeds, and then signals for retrieval—ensuring no hardware is left behind.
+        The <strong>SeedSphere</strong> is a reusable, drone-deployable spherical robot engineered to plant 
+        native California species across wildfire burn scars. Each SeedSphere aerates the soil, distributes 
+        native seeds, and signals for retrieval—ensuring no hardware is ever left behind.
     </p>
     <ul>
-        <li>Drone deployable + retrievable</li>
-        <li>0.5–1 acre treated per SeedSphere mission</li>
-        <li>Fully reusable and environmentally safe</li>
-        <li>Supports Ponderosa Pine, Incense Cedar, Jeffrey Pine & more</li>
+        <li>Drone deployable & drone retrievable</li>
+        <li>0.5–1 acre treated per mission</li>
+        <li>Native California seeds: Ponderosa Pine, Incense Cedar, Jeffrey Pine</li>
+        <li>Completely reusable | Zero forest litter</li>
     </ul>
 </div>
 
-<div class="section">
+<div class="section fade-in">
     <h2>Aria Enterprise Drone</h2>
     <p>
-        The Aria Enterprise Drone is a heavy-lift autonomous aircraft designed for rugged post-fire terrain. 
-        With dual SeedSphere payload tubes (10–12 spheres per sortie), the system can plant between 
-        <strong>5–12 acres per mission</strong> and operate continuously for large-scale recovery.
+        A heavy-lift autonomous platform designed for rugged terrain, the Aria Enterprise Drone deploys 
+        and retrieves 10–12 SeedSpheres per sortie. Using AI-assisted terrain mapping and mission planning, 
+        it can restore <strong>5–12 acres per flight</strong>.
     </p>
     <ul>
-        <li>Precision mapping and terrain-aware deployment</li>
-        <li>Automated SeedSphere drop and retrieval funnels</li>
-        <li>Operates in hazardous areas unsafe for manual crews</li>
+        <li>Dual SeedSphere payload tubes</li>
+        <li>Precision drop-gate + retrieval funnel system</li>
+        <li>Autonomous mapping & route planning</li>
         <li>Up to 280,000 native seeds planted per day with continuous cycling</li>
     </ul>
 </div>
 
-<div class="section">
+<div class="section fade-in">
     <h2>Our Mission</h2>
     <p>
-        Based in Railroad Flat, Calaveras County, AriaCore is dedicated to restoring California’s forests through 
-        advanced robotics and autonomous aerial systems. Our technologies support CAL FIRE, Sierra Nevada 
-        Conservancy, private landowners, and local communities in accelerating ecosystem recovery and 
-        strengthening climate resilience.
+        Based in Railroad Flat, Calaveras County, AriaCore is dedicated to restoring California forests 
+        through robotics and AI-driven automation. We support CAL FIRE, Sierra Nevada Conservancy, timber 
+        companies, and private landowners in accelerating post-fire ecosystem recovery.
     </p>
 </div>
 
-<div class="section">
+<div class="section fade-in">
     <h2>Government & Grant Readiness</h2>
-    <p>
-        AriaCore is fully registered and eligible for state and federal funding.
-    </p>
+    <p>AriaCore is compliant and fully eligible for California and federal programs:</p>
     <ul>
         <li><strong>UEI:</strong> PXEBEFN9KMB4</li>
         <li><strong>CAGE:</strong> 17AE0</li>
@@ -158,16 +160,37 @@
     </ul>
 </div>
 
-<div class="section contact-box">
+<div class="section contact-box fade-in">
     <h2>Contact</h2>
     <p><strong>Robert Pearsall</strong><br>
-       Founder, AriaCore AI & Robotics</p>
-    <p>Email: <a href="mailto:rpearsall@aria-core.tech">rpearsall@aria-core.tech</a></p>
+       Founder, AriaCore AI & Robotics<br>
+       Railroad Flat, Calaveras County, CA<br>
+       Email: <a href="mailto:rpearsall@aria-core.tech" style="color:var(--accent)">rpearsall@aria-core.tech</a>
+    </p>
 </div>
 
 <footer>
-    © 2025 AriaCore AI & Robotics — Railroad Flat, Calaveras County, California
+    © 2025 AriaCore AI & Robotics — All Rights Reserved
 </footer>
+
+<script>
+/* SIMPLE SCROLL REVEAL EFFECT */
+const elements = document.querySelectorAll('.fade-in');
+
+function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+document.addEventListener('scroll', revealOnScroll);
+window.onload = revealOnScroll;
+</script>
 
 </body>
 </html>
