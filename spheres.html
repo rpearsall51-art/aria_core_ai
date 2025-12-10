@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Environmental Spheres — AriaCore AI & Robotics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: radial-gradient(ellipse at bottom, #2b1f18 5%, #0a0f1a 70%);
+            color: #e7f2ee;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .stars {
+            background: url('https://raw.githubusercontent.com/rajatdiptabiswas/starfield/master/starfield.png');
+            opacity: 0.18;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .core-accent { color: #4fdac3; }
+    </style>
+</head>
+
+<body class="relative">
+
+<div class="stars"></div>
+
+<!-- NAVIGATION -->
+<header class="w-full py-6 px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
+    <h1 class="text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
+    <nav class="space-x-6 text-lg">
+        <a href="index.html" class="hover:text-teal-300">Home</a>
+        <a href="spheres.html" class="hover:text-teal-300">Environmental Spheres</a>
+        <a href="enterprise.html" class="hover:text-teal-300">Enterprise Drone</a>
+        <a href="humanoids.html" class="hover:text-teal-300">Humanoid Robotics</a>
+    </nav>
+</header>
+
+<!-- HEADER SECTION -->
+<section class="pt-40 pb-20 text-center px-6">
+    <h2 class="text-5xl font-bold core-accent drop-shadow-lg">Environmental Sphere Systems</h2>
+    <p class="mt-6 text-xl max-w-3xl mx-auto leading-relaxed">
+        Autonomous land and underwater ecological restoration units designed to rebuild forests,
+        restore reef systems, and accelerate environmental recovery across Earth’s damaged ecosystems.
+    </p>
+</section>
+
+<!-- SEEDSPHERE SECTION -->
+<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-4xl font-bold mb-12 core-accent text-center">SeedSphere — Land Reforestation Unit</h3>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+
+        <!-- IMAGE SLOT -->
+        <div class="bg-black/40 rounded-xl p-6 border border-teal-400/40 shadow-lg text-center">
+            <p class="text-gray-400 italic">SeedSphere Render Goes Here</p>
+        </div>
+
+        <!-- TEXT -->
+        <div>
+            <p class="text-lg leading-relaxed">
+                The SeedSphere is a lightweight, autonomous soil-aerating reforestation unit designed to disperse,
+                plant, and protect native seeds across fire scars, logged regions, and degraded landscapes.
+            </p>
+
+            <ul class="mt-6 space-y-4 text-lg">
+                <li>🌱 <span class="core-accent font-semibold">Gravity-fed seed channels</span> embedded within precision planting spikes.</li>
+                <li>🧭 <span class="core-accent font-semibold">Autonomous rolling locomotion</span> with terrain-adaptive redirection.</li>
+                <li>📡 <span class="core-accent font-semibold">AriaOS Node Signaling</span> for swarm coordination & retrieval.</li>
+                <li>🌍 <span class="core-accent font-semibold">Low-cost construction</span> enabling large-scale deployment.</li>
+                <li>♻️ <span class="core-accent font-semibold">Fully recoverable</span>: signals drone for retrieval after mission completion.</li>
+            </ul>
+
+            <p class="mt-6 text-lg">
+                Each SeedSphere can plant between <span class="core-accent font-semibold">50–80 native seeds</span> per mission,
+                depending on species and soil conditions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- AQUASPHERE SECTION -->
+<section class="w-full px-8 py-20">
+    <h3 class="text-4xl font-bold mb-12 core-accent text-center">AquaSphere — Underwater Restoration Unit</h3>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+
+        <!-- TEXT -->
+        <div>
+            <p class="text-lg leading-relaxed">
+                The AquaSphere extends AriaCore's restoration mission beneath the waves. Designed for reef repair,
+                kelp regeneration, and seagrass planting, it operates as a slow-rolling or neutrally buoyant
+                underwater ecological restoration device.
+            </p>
+
+            <ul class="mt-6 space-y-4 text-lg">
+                <li>🌊 <span class="core-accent font-semibold">Weighted internal core</span> for stability at varied depths.</li>
+                <li>🐠 <span class="core-accent font-semibold">Coral substrate release channels</span> for restoring reef beds.</li>
+                <li>🧭 <span class="core-accent font-semibold">Soft thruster-assisted drift</span> for wide-area movement.</li>
+                <li>📡 <span class="core-accent font-semibold">AriaOS underwater mesh networking</span>.</li>
+                <li>♻️ <span class="core-accent font-semibold">Eco-safe materials</span> suitable for marine environments.</li>
+            </ul>
+
+            <p class="mt-6 text-lg">
+                Designed to complement global reef restoration programs, the AquaSphere can deploy seed clusters,
+                coral fragments, kelp spores, or seagrass pods with precision and repeatability.
+            </p>
+        </div>
+
+        <!-- IMAGE SLOT -->
+        <div class="bg-black/40 rounded-xl p-6 border border-teal-400/40 shadow-lg text-center">
+            <p class="text-gray-400 italic">AquaSphere Render Goes Here</p>
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM INTEGRATION -->
+<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-4xl font-bold mb-12 core-accent text-center">AriaOS Ecological Mission Integration</h3>
+
+    <div class="max-w-5xl mx-auto text-lg leading-relaxed text-center">
+        <p>
+            Both SeedSphere and AquaSphere operate as coordinated AriaOS nodes, forming an intelligent swarm
+            capable of terrain mapping, seed distribution, ecological restoration, and post-mission retrieval.
+        </p>
+        <p class="mt-4">
+            Combined with the Enterprise Drone Program, the sphere ecosystem forms AriaCore’s
+            <span class="core-accent font-semibold">planet-scale reforestation and restoration network</span>.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full py-8 text-center text-sm text-gray-400 bg-black/30">
+    © 2025 AriaCore AI & Robotics — Environmental Restoration Systems.
+</footer>
+
+</body>
+</html>
