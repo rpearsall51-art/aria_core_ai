@@ -1,0 +1,125 @@
+/* ============================================================
+   AriaCore Global Supplemental Styles
+   Works alongside Tailwind for theme cohesion
+   ============================================================ */
+
+/* Brand Color Variables */
+:root {
+    --core-teal: #4fdac3;
+    --core-teal-soft: #4fdac3aa;
+    --earth-deep: #2b1f18;
+    --space-blue: #0a0f1a;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.20s ease;
+}
+
+/* General body enhancements */
+body {
+    background: radial-gradient(ellipse at bottom, var(--earth-deep) 5%, var(--space-blue) 70%);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Subtle teal glow effect used on core accent elements */
+.core-glow {
+    text-shadow: 0 0 10px var(--core-teal-soft), 0 0 18px var(--core-teal-soft);
+}
+
+/* Section divider shimmer */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,
+        transparent,
+        var(--core-teal),
+        transparent
+    );
+    margin: 3rem 0;
+    opacity: 0.4;
+}
+
+/* Card-style hover lift (for nodes and images) */
+.card-hover {
+    transform: translateY(0);
+}
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Universal link glow on hover */
+a:hover {
+    color: var(--core-teal);
+    text-shadow: 0 0 8px var(--core-teal-soft);
+}
+
+/* Smooth fade-in animations for page load */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Button styling for future forms or CTA sections */
+.ac-btn {
+    background-color: var(--core-teal);
+    color: #0a0f1a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+.ac-btn:hover {
+    background-color: #70ffe1;
+}
+
+/* Background overlays for optional hero effects */
+.earth-overlay {
+    background: radial-gradient(ellipse at bottom,
+        #3d2c20 0%,
+        transparent 60%
+    );
+}
+.space-overlay {
+    background: radial-gradient(circle at top,
+        #0c1822 0%,
+        transparent 70%
+    );
+}
+
+/* Image render placeholder styling (until real assets added) */
+.render-slot {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(79, 218, 195, 0.4);
+    border-radius: 0.8rem;
+    padding: 2rem;
+    text-align: center;
+    color: #9db7b1;
+    font-style: italic;
+}
+
+/* Footer styling improvements */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    nav a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+    nav {
+        text-align: right;
+    }
+}
