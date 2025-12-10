@@ -1,196 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AriaCore AI & Robotics – Autonomous Reforestation Systems</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AriaCore AI & Robotics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-/* ======= GLOBAL STYLES ======= */
-body {
-    margin: 0;
-    padding: 0;
-    background: #0a0d0a;
-    color: #e0e5d8;
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+    <style>
+        /* Earth → Space gradient */
+        body {
+            background: radial-gradient(ellipse at bottom, #2b1f18 5%, #0a0f1a 70%);
+            color: #e7f2ee;
+            font-family: 'Inter', sans-serif;
+        }
 
-/* COLORS */
-:root {
-    --accent: #7df27d;        /* neon green */
-    --accent-soft: #2c582c;   /* forest green */
-    --panel: #111511;         /* deep earth */
-    --border: #2f3a2e;        /* subtle borders */
-}
+        /* Subtle starfield overlay */
+        .stars {
+            background: url('https://raw.githubusercontent.com/rajatdiptabiswas/starfield/master/starfield.png');
+            opacity: 0.18;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
 
-/* ==== ANIMATIONS ==== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ==== HEADER / HERO ==== */
-header {
-    background: linear-gradient(135deg, #060806, #0b130b);
-    text-align: center;
-    padding: 120px 20px;
-    border-bottom: 2px solid var(--accent-soft);
-    box-shadow: 0 0 40px rgba(0,255,100,0.12);
-}
-
-header h1 {
-    font-size: 3.5rem;
-    color: var(--accent);
-    letter-spacing: 3px;
-    text-shadow: 0 0 12px rgba(125,242,125,0.5);
-    margin: 0;
-}
-
-header p {
-    font-size: 1.3rem;
-    color: #cbd4c1;
-    margin-top: 10px;
-}
-
-/* ==== SECTIONS ==== */
-.section {
-    max-width: 960px;
-    margin: 60px auto;
-    padding: 40px 25px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
-}
-
-.section h2 {
-    font-size: 2.2rem;
-    color: var(--accent);
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(90,255,90,0.3);
-}
-
-.section p, .section li {
-    font-size: 1.1rem;
-    color: #dde3d4;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-/* CONTACT BOX */
-.contact-box {
-    background: #0d120d;
-    border-left: 5px solid var(--accent);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
-    color: #888;
-}
-</style>
-
+        /* Glow accent */
+        .core-accent {
+            color: #4fdac3;
+        }
+    </style>
 </head>
-<body>
 
-<header class="fade-in">
-    <h1>AriaCore AI & Robotics</h1>
-    <p>Autonomous Systems for Climate Recovery & Post-Wildfire Reforestation</p>
+<body class="relative">
+
+<div class="stars"></div>
+
+<!-- NAVIGATION -->
+<header class="w-full py-6 px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
+    <h1 class="text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
+    <nav class="space-x-6 text-lg">
+        <a href="index.html" class="hover:text-teal-300">Home</a>
+        <a href="spheres.html" class="hover:text-teal-300">Environmental Spheres</a>
+        <a href="enterprise.html" class="hover:text-teal-300">Enterprise Drone</a>
+        <a href="humanoids.html" class="hover:text-teal-300">Humanoid Robotics</a>
+    </nav>
 </header>
 
-<div class="section fade-in">
-    <h2>SeedSphere Autonomous Reforestation System</h2>
-    <p>
-        The <strong>SeedSphere</strong> is a reusable, drone-deployable spherical robot engineered to plant 
-        native California species across wildfire burn scars. Each SeedSphere aerates the soil, distributes 
-        native seeds, and signals for retrieval—ensuring no hardware is ever left behind.
+<!-- HERO SECTION -->
+<section class="w-full flex flex-col justify-center items-center text-center min-h-screen px-6">
+    <h2 class="text-5xl font-bold mt-24 core-accent drop-shadow-lg">AriaOS Autonomous Intelligence</h2>
+    <p class="mt-6 text-xl max-w-3xl leading-relaxed">
+        Coordinating distributed robots, drones, environmental systems, and autonomous agents into
+        a unified, intelligent network for Earth restoration and long-term planetary resilience.
     </p>
-    <ul>
-        <li>Drone deployable & drone retrievable</li>
-        <li>0.5–1 acre treated per mission</li>
-        <li>Native California seeds: Ponderosa Pine, Incense Cedar, Jeffrey Pine</li>
-        <li>Completely reusable | Zero forest litter</li>
-    </ul>
-</div>
 
-<div class="section fade-in">
-    <h2>Aria Enterprise Drone</h2>
-    <p>
-        A heavy-lift autonomous platform designed for rugged terrain, the Aria Enterprise Drone deploys 
-        and retrieves 10–12 SeedSpheres per sortie. Using AI-assisted terrain mapping and mission planning, 
-        it can restore <strong>5–12 acres per flight</strong>.
-    </p>
-    <ul>
-        <li>Dual SeedSphere payload tubes</li>
-        <li>Precision drop-gate + retrieval funnel system</li>
-        <li>Autonomous mapping & route planning</li>
-        <li>Up to 280,000 native seeds planted per day with continuous cycling</li>
-    </ul>
-</div>
+    <!-- Mission Statement -->
+    <div class="mt-12 max-w-4xl text-lg leading-relaxed bg-black/30 p-8 rounded-xl shadow-xl backdrop-blur-md">
+        <p>
+            AriaCore exists to preserve and protect the only world humanity has —
+            and to help restore the health, stability, and long-term sustainability of the planet we depend on.
+            Through accessible robotics and AriaOS, our autonomous intelligence platform, we empower communities,
+            support ecological recovery, and strengthen society for generations to come.
+        </p>
+        <p class="mt-4">
+            Our mission is simple in purpose but profound in impact:
+            <span class="core-accent font-semibold">to heal the planet, uplift humanity, and ensure that future generations inherit
+            a more resilient, balanced, and hopeful world.</span>
+        </p>
+    </div>
+</section>
 
-<div class="section fade-in">
-    <h2>Our Mission</h2>
-    <p>
-        Based in Railroad Flat, Calaveras County, AriaCore is dedicated to restoring California forests 
-        through robotics and AI-driven automation. We support CAL FIRE, Sierra Nevada Conservancy, timber 
-        companies, and private landowners in accelerating post-fire ecosystem recovery.
-    </p>
-</div>
+<!-- NODE SELECTION GRID -->
+<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-4xl font-bold text-center mb-12 core-accent">AriaOS Node Systems</h3>
 
-<div class="section fade-in">
-    <h2>Government & Grant Readiness</h2>
-    <p>AriaCore is compliant and fully eligible for California and federal programs:</p>
-    <ul>
-        <li><strong>UEI:</strong> PXEBEFN9KMB4</li>
-        <li><strong>CAGE:</strong> 17AE0</li>
-        <li>SAM.gov registration: Active</li>
-    </ul>
-</div>
+    <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
 
-<div class="section contact-box fade-in">
-    <h2>Contact</h2>
-    <p><strong>Robert Pearsall</strong><br>
-       Founder, AriaCore AI & Robotics<br>
-       Railroad Flat, Calaveras County, CA<br>
-       Email: <a href="mailto:rpearsall@aria-core.tech" style="color:var(--accent)">rpearsall@aria-core.tech</a>
-    </p>
-</div>
+        <!-- Spheres -->
+        <a href="spheres.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
+            <h4 class="text-2xl font-semibold core-accent">Environmental Sphere Systems</h4>
+            <p class="mt-4">
+                SeedSphere & AquaSphere — autonomous land and underwater ecological restoration units.  
+                Active Development: <span class="core-accent">6–12 months</span>.
+            </p>
+        </a>
 
-<footer>
-    © 2025 AriaCore AI & Robotics — All Rights Reserved
+        <!-- Enterprise Drone -->
+        <a href="enterprise.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
+            <h4 class="text-2xl font-semibold core-accent">Enterprise Drone Program</h4>
+            <p class="mt-4">
+                VTOL hybrid drones for long-range reforestation, mapping, retrieval, and autonomous mission support.  
+                Active Development: <span class="core-accent">6–12 months</span>.
+            </p>
+        </a>
+
+        <!-- Humanoids -->
+        <a href="humanoids.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
+            <h4 class="text-2xl font-semibold core-accent">Mach-Series Humanoids</h4>
+            <p class="mt-4">
+                Industrial, disaster relief, and community-rebuild humanoid platforms.  
+                Development Horizon: <span class="core-accent">2–6 years</span>.
+            </p>
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full py-8 text-center text-sm text-gray-400 bg-black/30">
+    © 2025 AriaCore AI & Robotics — Empowering Earth, Empowering Humanity.
 </footer>
-
-<script>
-/* SIMPLE SCROLL REVEAL EFFECT */
-const elements = document.querySelectorAll('.fade-in');
-
-function revealOnScroll() {
-    const trigger = window.innerHeight * 0.85;
-
-    elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < trigger) {
-            el.classList.add('visible');
-        }
-    });
-}
-
-document.addEventListener('scroll', revealOnScroll);
-window.onload = revealOnScroll;
-</script>
 
 </body>
 </html>
