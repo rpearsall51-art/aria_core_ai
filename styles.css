@@ -33,6 +33,9 @@ nav {
     backdrop-filter: blur(12px);
     background: rgba(10, 15, 20, 0.45);
     border-bottom: 1px solid rgba(0, 255, 200, 0.15);
+
+    /* Added to allow more nav items */
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -41,10 +44,20 @@ nav a {
     margin-left: 24px;
     font-size: 1rem;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: #7fffe5;
+}
+
+/* Disabled/Greyed nav links */
+nav a.soon,
+nav a[style*="opacity"] {
+    opacity: 0.45 !important;
+    filter: grayscale(90%) !important;
+    pointer-events: none !important;
+    cursor: default;
 }
 
 /* ===========================
@@ -107,6 +120,7 @@ nav a:hover {
     object-fit: cover;
     display: block;
     margin: 0;
+    border-bottom: 1px solid rgba(0,255,200,0.15);
 }
 
 /* ===========================
@@ -151,6 +165,34 @@ nav a:hover {
 .btn:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0 22px rgba(0, 255, 200, 0.9);
+}
+
+/* Disabled/coming soon button */
+.btn.soon {
+    opacity: 0.4;
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+/* ===========================
+   COMING SOON BLOCKS
+=========================== */
+
+.coming-soon-block {
+    opacity: 0.45;
+    filter: grayscale(85%);
+    pointer-events: none;
+    padding: 60px 12%;
+}
+
+.coming-soon-label {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.12);
+    color: #9fffee;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
 
 /* ===========================
@@ -200,6 +242,7 @@ footer a:hover {
     nav {
         flex-direction: column;
         text-align: center;
+        padding-bottom: 15px;
     }
 
     nav a {
@@ -212,5 +255,9 @@ footer a:hover {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .hero-img {
+        height: 55vh;
     }
 }
