@@ -3,157 +3,60 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Environmental Spheres — AriaCore AI & Robotics</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AriaCore • SeedSphere Systems</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="relative">
-<div class="stars"></div>
+<body>
 
-<!-- NAV -->
-<header class="w-full py-4 px-6 md:px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
-    <div class="flex items-center space-x-3">
-        <img src="img/ariacore-logo.png" alt="AriaCore logo" class="w-9 h-9 rounded-full object-contain" />
-        <h1 class="text-xl md:text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
+<nav>
+    <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="AriaCore Logo" style="height:48px;"></a>
     </div>
-    <nav class="hidden md:block space-x-6 text-lg">
-        <a href="index.html" class="hover:text-teal-300">Home</a>
-        <a href="spheres.html" class="hover:text-teal-300">Environmental Spheres</a>
-        <a href="enterprise.html" class="hover:text-teal-300">Enterprise Drone</a>
-        <a href="humanoids.html" class="hover:text-teal-300">Humanoid Robotics</a>
-    </nav>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="enterprise.html">Enterprise Drones</a>
+        <a href="spheres.html">SeedSphere Systems</a>
+        <a href="humanoids.html">Mach-Series Humanoids</a>
+        <a href="services.html">Solutions & Services</a>
+        <a href="store.html" class="soon">High-Tech Store</a>
+        <a href="https://www.paypal.com/ncp/payment/SB6DYRDWK26SE" target="_blank">Support</a>
+    </div>
+</nav>
+
+<header class="hero" style="background-image:url('images/earth.jpg'); height:60vh;">
+    <div class="hero-content">
+        <h1>SeedSphere Environmental Systems</h1>
+        <p>Autonomous terrain restoration for forests, coastlines, and aquatic ecosystems.</p>
+    </div>
 </header>
 
-<!-- HEADER SECTION -->
-<section class="pt-32 md:pt-40 pb-16 text-center px-6">
-    <h2 class="text-4xl md:text-5xl font-bold core-accent drop-shadow-lg">Environmental Sphere Systems</h2>
-    <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-        Autonomous land and underwater ecological restoration units designed to rebuild forests,
-        restore reef systems, and accelerate environmental recovery across Earth’s damaged ecosystems.
+<img src="images/seedsphere.png" class="hero-img" alt="SeedSphere">
+
+<section class="section">
+    <h2>SeedSphere – Ground Restoration Unit</h2>
+    <p>
+        The SeedSphere rolls across terrain after autonomous drone deployment, aerating soil 
+        with its flexible spike shell while gently releasing thousands of native plant seeds. 
+        Its TPU shock-absorbing core allows it to survive impacts and navigate uneven ground.
     </p>
 </section>
 
-<!-- SEEDSPHERE SECTION -->
-<section class="w-full px-6 md:px-8 py-16 md:py-20 bg-black/30 backdrop-blur-md">
-    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">SeedSphere — Land Reforestation Unit</h3>
+<img src="images/aquasphere.png" class="hero-img" alt="AquaSphere">
 
-    <div class="grid md:grid-cols-2 gap-10 md:gap-12 max-w-6xl mx-auto items-center">
-
-        <!-- IMAGE -->
-        <div class="render-slot card-hover">
-            <img src="img/seedsphere.png"
-                 alt="AriaCore SeedSphere autonomous reforestation unit"
-                 class="w-full h-full object-contain" />
-        </div>
-
-        <!-- TEXT -->
-        <div>
-            <p class="text-lg leading-relaxed">
-                The SeedSphere is a lightweight, autonomous soil-aerating reforestation unit designed to disperse,
-                plant, and protect native seeds across fire scars, logged regions, and degraded landscapes.
-            </p>
-
-            <ul class="mt-6 space-y-4 text-lg">
-                <li>🌱 <span class="core-accent font-semibold">Gravity-fed seed channels</span> embedded within precision planting spikes.</li>
-                <li>🧭 <span class="core-accent font-semibold">Autonomous rolling locomotion</span> with terrain-adaptive redirection.</li>
-                <li>📡 <span class="core-accent font-semibold">AriaOS node signaling</span> for swarm coordination & retrieval.</li>
-                <li>🌍 <span class="core-accent font-semibold">Low-cost construction</span> enabling large-scale deployment.</li>
-                <li>♻️ <span class="core-accent font-semibold">Fully recoverable</span> — signals drones for pickup after mission completion.</li>
-            </ul>
-
-            <p class="mt-6 text-lg">
-                Each SeedSphere can plant between <span class="core-accent font-semibold">50–80 native seeds</span> per mission,
-                depending on species and soil conditions.
-            </p>
-        </div>
-    </div>
-
-    <!-- Sketch / concept row -->
-    <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
-        <div class="render-slot card-hover">
-            <img src="img/seedsphere-sketch.png"
-                 alt="Concept sketch of AriaCore SeedSphere design"
-                 class="w-full h-full object-contain" />
-        </div>
-        <p class="text-sm md:text-base leading-relaxed text-gray-200">
-            The SeedSphere concept began as a simple, robust mechanical system: a gravity-fed core inside a shock-absorbing shell,
-            using micro-aeration spikes to penetrate the soil, create oxygen channels, and deliver seeds into ideal depth bands.
-            The design is intentionally modular so communities can adapt it to their own native species.
-        </p>
-    </div>
+<section class="section">
+    <h2>AquaSphere – Oceanic Seeding Unit</h2>
+    <p>
+        Designed for underwater ecosystems, the AquaSphere uses fin-based traction to spread 
+        seagrass, kelp spores, and reef-support seeds across ocean floors. It kicks up sediment 
+        to bury seeds and promote stable marine regrowth.
+    </p>
 </section>
 
-<!-- AQUASPHERE SECTION -->
-<section class="w-full px-6 md:px-8 py-16 md:py-20">
-    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">AquaSphere — Underwater Restoration Unit</h3>
-
-    <div class="grid md:grid-cols-2 gap-10 md:gap-12 max-w-6xl mx-auto items-center">
-
-        <!-- TEXT -->
-        <div>
-            <p class="text-lg leading-relaxed">
-                The AquaSphere extends AriaCore's restoration mission beneath the waves. Designed for reef repair,
-                kelp regeneration, and seagrass planting, it operates as a slow-rolling or neutrally buoyant
-                underwater ecological restoration device.
-            </p>
-
-            <ul class="mt-6 space-y-4 text-lg">
-                <li>🌊 <span class="core-accent font-semibold">Hydrodynamic fins</span> that act as underwater traction paddles.</li>
-                <li>🐠 <span class="core-accent font-semibold">Substrate release ports</span> for coral, kelp spores, or seagrass pods.</li>
-                <li>🧭 <span class="core-accent font-semibold">Soft thruster-assisted drift</span> for wide-area coverage.</li>
-                <li>📡 <span class="core-accent font-semibold">AriaOS underwater mesh networking</span> for coordinated swarms.</li>
-                <li>♻️ <span class="core-accent font-semibold">Eco-safe composite shell</span> suitable for marine environments.</li>
-            </ul>
-
-            <p class="mt-6 text-lg">
-                AquaSphere units can be deployed from surface vessels, shoreline teams, or future AriaCore marine drones,
-                providing a scalable tool for large reef and coastal restoration projects.
-            </p>
-        </div>
-
-        <!-- IMAGE -->
-        <div class="render-slot card-hover">
-            <img src="img/aquasphere.png"
-                 alt="AriaCore AquaSphere underwater ecological restoration unit"
-                 class="w-full h-full object-contain" />
-        </div>
-    </div>
-
-    <!-- Drone + spheres -->
-    <div class="mt-12 max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <div class="render-slot card-hover">
-            <img src="img/seedsphere-drone.png"
-                 alt="Drone deploying multiple SeedSphere units"
-                 class="w-full h-full object-contain" />
-        </div>
-        <p class="text-sm md:text-base leading-relaxed text-gray-200">
-            In combination with VTOL drones, SeedSphere and AquaSphere become part of a continuous deployment
-            and retrieval cycle. Airborne platforms can deliver full spheres into hard-to-reach terrain or
-            coastal regions, then return later to collect empty shells for reuse, keeping hardware out of
-            the environment while leaving restored ecosystems behind.
-        </p>
-    </div>
-</section>
-
-<!-- INTEGRATION -->
-<section class="w-full px-6 md:px-8 py-16 md:py-20 bg-black/30 backdrop-blur-md">
-    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">AriaOS Ecological Mission Integration</h3>
-
-    <div class="max-w-5xl mx-auto text-lg leading-relaxed text-center">
-        <p>
-            Both SeedSphere and AquaSphere operate as coordinated AriaOS nodes, forming an intelligent swarm
-            capable of terrain mapping, seed distribution, ecological restoration, and post-mission retrieval.
-        </p>
-        <p class="mt-4">
-            Combined with the Enterprise Drone Program, the sphere ecosystem forms AriaCore’s
-            <span class="core-accent font-semibold">planet-scale reforestation and restoration network</span>.
-        </p>
-    </div>
-</section>
-
-<footer class="w-full py-6 md:py-8 text-center text-xs md:text-sm text-gray-400 bg-black/30">
-    © 2025 AriaCore AI & Robotics — Environmental Restoration Systems.
+<footer>
+    © 2025 AriaCore AI & Robotics — Rebuilding the Earth, One Mission at a Time.<br>
+    Contact: <a href="mailto:rpearsall@aria-core.tech">rpearsall@aria-core.tech</a> |
+    <a href="tel:+18016089220">1 (801) 608-9220</a>
 </footer>
 
 </body>
