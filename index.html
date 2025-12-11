@@ -5,56 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AriaCore AI & Robotics</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        /* Earth → Space gradient */
-        body {
-            background: radial-gradient(ellipse at bottom, #2b1f18 5%, #0a0f1a 70%);
-            color: #e7f2ee;
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Subtle starfield overlay */
-        .stars {
-            background: url('https://raw.githubusercontent.com/rajatdiptabiswas/starfield/master/starfield.png');
-            opacity: 0.18;
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-        }
-
-        /* Glow accent */
-        .core-accent {
-            color: #4fdac3;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="relative">
-
 <div class="stars"></div>
 
 <!-- NAVIGATION -->
-<header class="w-full py-6 px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
-    <h1 class="text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
-    <nav class="space-x-6 text-lg">
+<header class="w-full py-4 px-6 md:px-8 flex justify-between items-center bg-black/30 backdrop-blur-md fixed top-0 left-0 z-50">
+    <div class="flex items-center space-x-3">
+        <img src="img/ariacore-logo.png" alt="AriaCore AI & Robotics logo" class="w-10 h-10 rounded-full object-contain" />
+        <h1 class="text-xl md:text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
+    </div>
+    <nav class="hidden md:block space-x-6 text-lg">
         <a href="index.html" class="hover:text-teal-300">Home</a>
         <a href="spheres.html" class="hover:text-teal-300">Environmental Spheres</a>
         <a href="enterprise.html" class="hover:text-teal-300">Enterprise Drone</a>
         <a href="humanoids.html" class="hover:text-teal-300">Humanoid Robotics</a>
+        <a href="#support" class="hover:text-teal-300 text-sm">Support</a>
     </nav>
 </header>
 
 <!-- HERO SECTION -->
-<section class="w-full flex flex-col justify-center items-center text-center min-h-screen px-6">
-    <h2 class="text-5xl font-bold mt-24 core-accent drop-shadow-lg">AriaOS Autonomous Intelligence</h2>
-    <p class="mt-6 text-xl max-w-3xl leading-relaxed">
-        Coordinating distributed robots, drones, environmental systems, and autonomous agents into
-        a unified, intelligent network for Earth restoration and long-term planetary resilience.
-    </p>
+<section class="w-full flex flex-col justify-center items-center text-center min-h-screen px-6 hero-earth">
+    <div class="mt-28 md:mt-32 max-w-4xl fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold core-accent core-glow drop-shadow-lg">
+            AriaOS Autonomous Intelligence
+        </h2>
+        <p class="mt-6 text-lg md:text-xl leading-relaxed">
+            Coordinating distributed robots, drones, environmental systems, and autonomous agents into
+            a unified, intelligent network for Earth restoration and long-term planetary resilience.
+        </p>
+    </div>
 
     <!-- Mission Statement -->
-    <div class="mt-12 max-w-4xl text-lg leading-relaxed bg-black/30 p-8 rounded-xl shadow-xl backdrop-blur-md">
+    <div class="mt-10 md:mt-12 max-w-4xl text-base md:text-lg leading-relaxed bg-black/50 p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-md fade-in-delayed">
         <p>
             AriaCore exists to preserve and protect the only world humanity has —
             and to help restore the health, stability, and long-term sustainability of the planet we depend on.
@@ -63,51 +48,89 @@
         </p>
         <p class="mt-4">
             Our mission is simple in purpose but profound in impact:
-            <span class="core-accent font-semibold">to heal the planet, uplift humanity, and ensure that future generations inherit
-            a more resilient, balanced, and hopeful world.</span>
+            <span class="core-accent font-semibold">
+                to heal the planet, uplift humanity, and ensure that future generations inherit
+                a more resilient, balanced, and hopeful world.
+            </span>
         </p>
     </div>
 </section>
 
-<!-- NODE SELECTION GRID -->
-<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
-    <h3 class="text-4xl font-bold text-center mb-12 core-accent">AriaOS Node Systems</h3>
+<div class="section-divider"></div>
 
-    <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+<!-- NODE SELECTION GRID -->
+<section class="w-full px-6 md:px-8 py-16 md:py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 core-accent">AriaOS Node Systems</h3>
+
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
 
         <!-- Spheres -->
-        <a href="spheres.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
-            <h4 class="text-2xl font-semibold core-accent">Environmental Sphere Systems</h4>
-            <p class="mt-4">
-                SeedSphere & AquaSphere — autonomous land and underwater ecological restoration units.  
-                Active Development: <span class="core-accent">6–12 months</span>.
+        <a href="spheres.html" class="card-hover p-6 md:p-8 bg-black/40 rounded-xl shadow-lg border border-teal-400/40 block">
+            <h4 class="text-xl md:text-2xl font-semibold core-accent">Environmental Sphere Systems</h4>
+            <p class="mt-4 text-sm md:text-base">
+                SeedSphere & AquaSphere — autonomous land and underwater ecological restoration units.
+                Designed for reforestation, reef recovery, and degraded ecosystem repair.
+            </p>
+            <p class="mt-4 text-xs md:text-sm text-gray-300">
+                Status: <span class="core-accent font-semibold">Active Development (6–12 months)</span>
             </p>
         </a>
 
         <!-- Enterprise Drone -->
-        <a href="enterprise.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
-            <h4 class="text-2xl font-semibold core-accent">Enterprise Drone Program</h4>
-            <p class="mt-4">
-                VTOL hybrid drones for long-range reforestation, mapping, retrieval, and autonomous mission support.  
-                Active Development: <span class="core-accent">6–12 months</span>.
+        <a href="enterprise.html" class="card-hover p-6 md:p-8 bg-black/40 rounded-xl shadow-lg border border-teal-400/40 block">
+            <h4 class="text-xl md:text-2xl font-semibold core-accent">Enterprise Drone Program</h4>
+            <p class="mt-4 text-sm md:text-base">
+                VTOL hybrid drones for long-range reforestation, mapping, payload deployment, and autonomous mission support
+                in remote and post-disaster environments.
+            </p>
+            <p class="mt-4 text-xs md:text-sm text-gray-300">
+                Status: <span class="core-accent font-semibold">Active Development (6–12 months)</span>
             </p>
         </a>
 
         <!-- Humanoids -->
-        <a href="humanoids.html" class="p-8 bg-black/40 rounded-xl shadow-lg hover:bg-black/50 transition border border-teal-400/40">
-            <h4 class="text-2xl font-semibold core-accent">Mach-Series Humanoids</h4>
-            <p class="mt-4">
-                Industrial, disaster relief, and community-rebuild humanoid platforms.  
-                Development Horizon: <span class="core-accent">2–6 years</span>.
+        <a href="humanoids.html" class="card-hover p-6 md:p-8 bg-black/40 rounded-xl shadow-lg border border-teal-400/40 block">
+            <h4 class="text-xl md:text-2xl font-semibold core-accent">Mach-Series Humanoids</h4>
+            <p class="mt-4 text-sm md:text-base">
+                Industrial, disaster relief, and community-rebuild humanoid platforms designed to work alongside humans
+                in the field, not replace them.
+            </p>
+            <p class="mt-4 text-xs md:text-sm text-gray-300">
+                Status: <span class="core-accent font-semibold">Long-Term Development (2–6 years)</span>
             </p>
         </a>
 
     </div>
 </section>
 
+<div class="section-divider"></div>
+
+<!-- SUPPORT / DONATE SECTION -->
+<section id="support" class="w-full px-6 md:px-8 py-14 bg-black/40 backdrop-blur-md">
+    <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl md:text-3xl font-bold core-accent mb-4">Support AriaCore</h3>
+        <p class="text-sm md:text-base leading-relaxed text-gray-200">
+            AriaCore is building accessible robotics and autonomous systems to restore forests,
+            stabilize ecosystems, and help communities recover after disaster — starting here on Earth.
+            If you’d like to help accelerate development or sponsor a pilot deployment in your region,
+            we’d love to hear from you.
+        </p>
+        <a
+            href="mailto:rpearsall@aria-core.tech?subject=Supporting%20AriaCore"
+            class="inline-block mt-6 ac-btn text-sm md:text-base"
+        >
+            Get Involved / Support AriaCore
+        </a>
+    </div>
+</section>
+
 <!-- FOOTER -->
-<footer class="w-full py-8 text-center text-sm text-gray-400 bg-black/30">
+<footer class="w-full py-6 md:py-8 text-center text-xs md:text-sm text-gray-400 bg-black/30">
     © 2025 AriaCore AI & Robotics — Empowering Earth, Empowering Humanity.
+    <br />
+    <a href="#support" class="text-gray-300 hover:text-teal-300 text-xs">
+        Subtle support link: Learn how to help.
+    </a>
 </footer>
 
 </body>
