@@ -5,34 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Humanoid Robotics — AriaCore AI & Robotics</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        body {
-            background: radial-gradient(ellipse at bottom, #2b1f18 5%, #0a0f1a 70%);
-            color: #e7f2ee;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .stars {
-            background: url('https://raw.githubusercontent.com/rajatdiptabiswas/starfield/master/starfield.png');
-            opacity: 0.18;
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-        }
-
-        .core-accent { color: #4fdac3; }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="relative">
-
 <div class="stars"></div>
 
-<!-- NAVIGATION -->
-<header class="w-full py-6 px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
-    <h1 class="text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
-    <nav class="space-x-6 text-lg">
+<header class="w-full py-4 px-6 md:px-8 flex justify-between items-center bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
+    <div class="flex items-center space-x-3">
+        <img src="img/ariacore-logo.png" alt="AriaCore logo" class="w-9 h-9 rounded-full object-contain" />
+        <h1 class="text-xl md:text-2xl font-bold tracking-wide core-accent">AriaCore AI & Robotics</h1>
+    </div>
+    <nav class="hidden md:block space-x-6 text-lg">
         <a href="index.html" class="hover:text-teal-300">Home</a>
         <a href="spheres.html" class="hover:text-teal-300">Environmental Spheres</a>
         <a href="enterprise.html" class="hover:text-teal-300">Enterprise Drone</a>
@@ -40,41 +24,38 @@
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="pt-40 pb-20 text-center px-6">
-    <h2 class="text-5xl font-bold core-accent drop-shadow-lg">Mach-Series Humanoid Robotics</h2>
-    <p class="mt-6 text-xl max-w-3xl mx-auto leading-relaxed">
+<section class="pt-32 md:pt-40 pb-16 text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-bold core-accent drop-shadow-lg">Mach-Series Humanoid Robotics</h2>
+    <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
         AriaCore’s human-aligned robotic platforms built to support infrastructure,
         emergency response, and long-term community resilience — all powered by AriaOS.
     </p>
 </section>
 
-<!-- MACH-1 SECTION -->
-<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
-    <h3 class="text-4xl font-bold mb-12 core-accent text-center">Mach-1 — Industrial Humanoid Platform</h3>
+<!-- MACH-1 -->
+<section class="w-full px-6 md:px-8 py-16 md:py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">Mach-1 — Industrial Humanoid Platform</h3>
 
-    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-
-        <!-- IMAGE SLOT -->
-        <div class="bg-black/40 rounded-xl p-6 border border-teal-400/40 shadow-lg text-center">
-            <p class="text-gray-400 italic">Mach-1 Render Goes Here</p>
+    <div class="grid md:grid-cols-2 gap-10 md:gap-12 max-w-6xl mx-auto items-center">
+        <div class="render-slot card-hover">
+            <img src="img/mach1.png"
+                 alt="AriaCore Mach-1 industrial humanoid robot"
+                 class="w-full h-full object-contain" />
         </div>
 
-        <!-- TEXT -->
         <div>
             <p class="text-lg leading-relaxed">
                 Mach-1 is AriaCore’s foundational humanoid platform, engineered for infrastructure tasks,
                 equipment handling, environmental field operations, and blue-collar workforce support.
-                Built with a female-proportioned frame for balance, accessibility, and reduced structural weight,
-                Mach-1 represents the first stage of a long-term robotics ecosystem.
+                Built with a female-aligned frame, Mach-1 represents the first stage of a long-term robotics ecosystem.
             </p>
 
             <ul class="mt-6 space-y-4 text-lg">
                 <li>🔧 <span class="core-accent font-semibold">Industrial-grade limb actuation</span> for lifting and manipulation.</li>
-                <li>⚡ <span class="core-accent font-semibold">High-efficiency power core</span> with modular battery architecture.</li>
+                <li>⚡ <span class="core-accent font-semibold">Nitrogen-over-oil intensifiers</span> for high-torque, low-power motion.</li>
                 <li>🤖 <span class="core-accent font-semibold">AriaOS task orchestration</span> for field coordination.</li>
                 <li>🧍‍♀️ <span class="core-accent font-semibold">Balanced humanoid form</span> engineered for real-world environments.</li>
-                <li>🛠️ <span class="core-accent font-semibold">Rugged composite chassis</span> for outdoor conditions.</li>
+                <li>🛠️ <span class="core-accent font-semibold">Rugged salvaged-component chassis</span> to keep costs low and repairability high.</li>
             </ul>
 
             <p class="mt-6 text-lg">
@@ -85,22 +66,21 @@
     </div>
 </section>
 
-<!-- MACH-2 SECTION -->
-<section class="w-full px-8 py-20">
-    <h3 class="text-4xl font-bold mb-12 core-accent text-center">Mach-2 — Disaster Relief Humanoid</h3>
+<!-- MACH-2 -->
+<section class="w-full px-6 md:px-8 py-16 md:py-20">
+    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">Mach-2 — Disaster Relief Humanoid</h3>
 
-    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-12 max-w-6xl mx-auto items-center">
 
-        <!-- TEXT -->
         <div>
             <p class="text-lg leading-relaxed">
-                Mach-2 expands AriaCore’s impact footprint into emergency response and disaster relief.
+                Mach-2 expands AriaCore’s impact into emergency response and disaster relief.
                 Designed for rapid deployment, hazardous environments, and structurally compromised zones,
                 Mach-2 supports operations that are unsafe or inaccessible for human responders.
             </p>
 
             <ul class="mt-6 space-y-4 text-lg">
-                <li>🚨 <span class="core-accent font-semibold">Thermal & hazard-resistant frame</span> for extreme environments.</li>
+                <li>🚨 <span class="core-accent font-semibold">Reinforced armor plating</span> for extreme conditions.</li>
                 <li>🛰️ <span class="core-accent font-semibold">Integrated aerial coordination</span> with AriaOS drones.</li>
                 <li>📦 <span class="core-accent font-semibold">Medical supply transport</span> and emergency payload delivery.</li>
                 <li>🛠️ <span class="core-accent font-semibold">Light debris removal</span> and structural assessment.</li>
@@ -113,25 +93,25 @@
             </p>
         </div>
 
-        <!-- IMAGE SLOT -->
-        <div class="bg-black/40 rounded-xl p-6 border border-teal-400/40 shadow-lg text-center">
-            <p class="text-gray-400 italic">Mach-2 Render Goes Here</p>
+        <div class="render-slot card-hover">
+            <img src="img/mach2.png"
+                 alt="AriaCore Mach-2 disaster relief humanoid robot"
+                 class="w-full h-full object-contain" />
         </div>
     </div>
 </section>
 
-<!-- MACH-3 SECTION -->
-<section class="w-full px-8 py-20 bg-black/30 backdrop-blur-md">
-    <h3 class="text-4xl font-bold mb-12 core-accent text-center">Mach-3 — Community Rebuild Humanoid</h3>
+<!-- MACH-3 -->
+<section class="w-full px-6 md:px-8 py-16 md:py-20 bg-black/30 backdrop-blur-md">
+    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">Mach-3 — Community Rebuild Humanoid</h3>
 
-    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-
-        <!-- IMAGE SLOT -->
-        <div class="bg-black/40 rounded-xl p-6 border border-teal-400/40 shadow-lg text-center">
-            <p class="text-gray-400 italic">Mach-3 Render Goes Here</p>
+    <div class="grid md:grid-cols-2 gap-10 md:gap-12 max-w-6xl mx-auto items-center">
+        <div class="render-slot card-hover">
+            <img src="img/mach3.png"
+                 alt="AriaCore Mach-3 advanced community rebuild humanoid robot"
+                 class="w-full h-full object-contain" />
         </div>
 
-        <!-- TEXT -->
         <div>
             <p class="text-lg leading-relaxed">
                 Mach-3 is envisioned as the advanced community-support and rebuilding platform, capable of working
@@ -148,16 +128,16 @@
             </ul>
 
             <p class="mt-6 text-lg">
-                Mach-3 is a <span class="core-accent font-semibold">future-stage system</span> representing the long-term vision of
-                AriaCore: technology that uplifts humanity and helps restore stability after crisis.
+                Mach-3 represents the long-term vision of AriaCore:
+                <span class="core-accent font-semibold">a walking embodiment of AriaOS coordinating entire fleets of robots to serve and restore human communities.</span>
             </p>
         </div>
     </div>
 </section>
 
-<!-- SYSTEM INTEGRATION -->
-<section class="w-full px-8 py-20">
-    <h3 class="text-4xl font-bold mb-12 core-accent text-center">AriaOS Humanoid Integration</h3>
+<!-- INTEGRATION -->
+<section class="w-full px-6 md:px-8 py-16 md:py-20">
+    <h3 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 core-accent text-center">AriaOS Humanoid Integration</h3>
 
     <div class="max-w-5xl mx-auto text-lg leading-relaxed text-center">
         <p>
@@ -178,8 +158,7 @@
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="w-full py-8 text-center text-sm text-gray-400 bg-black/30">
+<footer class="w-full py-6 md:py-8 text-center text-xs md:text-sm text-gray-400 bg-black/30">
     © 2025 AriaCore AI & Robotics — Mach-Series Robotics Program.
 </footer>
 
