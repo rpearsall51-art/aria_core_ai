@@ -2,32 +2,44 @@ name: Optimize and Commit All Images
 
 on:
   push:
-    # Triggers the workflow when you push code to the 'main' branch
     branches:
-      - main 
+      - main
+    paths:
+      - "**/*.jpg"
+      - "**/*.jpeg"
+      - "**/*.png"
+      - "**/*.webp"
+
+  pull_request:
+    paths:
+      - "**/*.jpg"
+      - "**/*.jpeg"
+      - "**/*.png"
+      - "**/*.webp"
+
   workflow_dispatch:
-    # Allows you to run this workflow manually from the 'Actions' tab in GitHub
 
 jobs:
-  compress-all-images:
+  compress-images:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
-        # Action to pull your code onto the GitHub runner machine
         uses: actions/checkout@v4
 
       - name: Compress All Images
-        # This action finds all images and compresses them in-place
+        id: compress
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          compressOnly: true # Only compress, do not fail the build if compression is minor
+          compressOnly: true
 
       - name: Commit and Push Compressed Images
-        # This action handles the 'git commit' and 'git push' operations reliably
-        uses: EndBug/add-and-commit@v9 
+        if: steps.compress.outputs.markdown != ''
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: GitHub Actions Bot
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: "Automated Image Compression (All Repo Images)"
-          add: '.' # Stages ALL changes made by the previous step
+          add: "."
+
