@@ -325,3 +325,14 @@ footer a:hover {
 .hero-img:hover {
     transform: scale(1.02);
 }
+
+.product-image {
+    max-width: 500px;       /* keeps images at a normal size */
+    width: 100%;            /* responsive scaling */
+    height: auto;           /* preserve proportions */
+    display: block;
+    margin: 0 auto 40px;    /* centers the image */
+    border-radius: 8px;     /* optional: looks nicer */
+    object-fit: contain;    /* prevents cropping */
+}
+
