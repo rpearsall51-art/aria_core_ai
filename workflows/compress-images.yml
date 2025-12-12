@@ -1,31 +1,33 @@
-name: Optimize Images
+name: Optimize and Commit All Images
+
 on:
-  pull_request:
-    paths:
-      - "**.jpg"
-      - "**.jpeg"
-      - "**.png"
-      - "**.webp"
+  push:
+    # Triggers the workflow when you push code to the 'main' branch
+    branches:
+      - main 
+  workflow_dispatch:
+    # Allows you to run this workflow manually from the 'Actions' tab in GitHub
+
 jobs:
-  build:
-    name: calibreapp/image-actions
+  compress-all-images:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Compress Images
+      - name: Checkout Repository
+        # Action to pull your code onto the GitHub runner machine
+        uses: actions/checkout@v4
+
+      - name: Compress All Images
+        # This action finds all images and compresses them in-place
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-- name: Commit and Push Compressed Images
-      # Only run if there were changes made by the compression step
-      if: steps.calibre.outputs.markdown != '' 
-      run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add . # Stages all changes, including compressed images
-        git commit -m "Automated Image Compression"
-        git push
-      env:
-        # Use GITHUB_TOKEN for authentication
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true # Only compress, do not fail the build if compression is minor
+
+      - name: Commit and Push Compressed Images
+        # This action handles the 'git commit' and 'git push' operations reliably
+        uses: EndBug/add-and-commit@v9 
+        with:
+          author_name: GitHub Actions Bot
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: "Automated Image Compression (All Repo Images)"
+          add: '.' # Stages ALL changes made by the previous step
