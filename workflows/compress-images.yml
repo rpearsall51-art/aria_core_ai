@@ -17,3 +17,15 @@ jobs:
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+- name: Commit and Push Compressed Images
+      # Only run if there were changes made by the compression step
+      if: steps.calibre.outputs.markdown != '' 
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add . # Stages all changes, including compressed images
+        git commit -m "Automated Image Compression"
+        git push
+      env:
+        # Use GITHUB_TOKEN for authentication
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
